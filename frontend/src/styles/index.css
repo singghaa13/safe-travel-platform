@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-cyber-900 text-cyber-50;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    min-height: 100vh;
+  }
+
+  * {
+    @apply border-cyber-700;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-neon focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-cyber-900;
+  }
+  
+  .btn-secondary {
+    @apply bg-gradient-to-r from-cyber-700 to-cyber-800 hover:from-cyber-600 hover:to-cyber-700 text-cyber-100 font-semibold py-3 px-6 rounded-xl border border-cyber-600 transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-cyber-500 focus:ring-offset-2 focus:ring-offset-cyber-900;
+  }
+  
+  .btn-safety {
+    @apply bg-gradient-to-r from-safety-500 to-safety-600 hover:from-safety-600 hover:to-safety-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-safety-400 focus:ring-offset-2 focus:ring-offset-cyber-900;
+  }
+
+  .btn-accent {
+    @apply bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 focus:ring-offset-cyber-900;
+  }
+  
+  .card {
+    @apply bg-cyber-800/50 backdrop-blur-sm rounded-2xl shadow-xl border border-cyber-700/50 p-6 hover:border-cyber-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyber-900/50;
+  }
+
+  .card-glass {
+    @apply bg-white/5 backdrop-blur-md rounded-2xl shadow-xl border border-white/10 p-6 hover:border-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-white/5;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 bg-cyber-800/50 border border-cyber-600/50 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent backdrop-blur-sm text-cyber-100 placeholder-cyber-400 transition-all duration-300;
+  }
+
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl shadow-2xl;
+  }
+
+  .neon-border {
+    @apply border border-primary-500/50 shadow-neon;
+  }
+
+  .cyber-gradient {
+    background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #8b5cf6 100%);
+  }
+
+  .safety-gradient {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);
+  }
+
+  .accent-gradient {
+    background: linear-gradient(135deg, #d946ef 0%, #c026d3 50%, #a21caf 100%);
+  }
+
+  .floating-element {
+    @apply animate-float;
+  }
+
+  .glow-effect {
+    @apply animate-glow;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-safety {
+    @apply bg-gradient-to-r from-safety-400 to-safety-300 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent;
+  }
+
+  .hero-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(217, 70, 239, 0.1) 0%, transparent 50%),
+      linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  }
+
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
